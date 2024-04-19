@@ -1,0 +1,17 @@
+// api/signup.js
+
+export default async function signup(req, res) {
+    if (req.method === 'POST') {
+        const { fullName, email, password } = req.body;
+
+        // Here, implement your signup logic (e.g., store user data in a database)
+        // Replace this with your actual signup logic
+
+        console.log('New user signed up:', { fullName, email });
+
+        // Respond with a success message
+        res.status(200).json({ message: 'User signed up successfully!' });
+    } else {
+        res.status(405).json({ error: 'Method Not Allowed' });
+    }
+}
